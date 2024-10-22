@@ -1,0 +1,36 @@
+from braket.aws import AwsDevice, AwsSession
+from braket.circuits import Circuit
+import boto3
+
+# Function to add two numbers and run a quantum circuit
+def quantum_sub_aws(num1, num2):
+    # Step 1: Classical addition of the two numbers
+    sum_result = num1 - num2
+    print(f"The difference of {num1} and {num2} is: {sum_result}")
+    
+    # Step 2: Initialize the AWS session and device
+    aws_session = AwsSession()
+    device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/sv1")
+    
+    # Step 3: Create a simple quantum circuit (Bell State as a placeholder)
+    bell_circuit = Circuit().h(0).cnot(0, 1)
+    
+    # Step 4: Run the circuit on the chosen device
+    task = device.run(bell_circuit, shots=100)
+    
+    # Step 5: Get the result of the quantum task
+    result = task.result()
+    print("Quantum Measurement Counts:", result.measurement_counts)
+    
+    # Step 6: Store both the addition result and quantum measurement in S3
+    s3 = boto3.client('s3')
+    s3.put_object(
+        Bucket='your-quantum-results',  # Replace with your S3 bucket name
+        Key='quantum_subtraction_results.txt',
+        Body=f"Difference of {num1} and {num2} is: {sum_result}\nQuantum Measurement: {result.measurement_counts}"
+    )
+    
+    print("Results (difference and quantum measurement) stored in S3")
+
+# Example usage
+quantum_sub_aws(7, 6)
