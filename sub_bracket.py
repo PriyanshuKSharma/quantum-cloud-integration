@@ -7,6 +7,7 @@ def quantum_sub_aws(num1, num2):
     # Step 1: Classical addition of the two numbers
     sum_result = num1 - num2
     print(f"The difference of {num1} and {num2} is: {sum_result}")
+    print("Execution Finished\nProcess Completed")
     
     # Step 2: Initialize the AWS session and device
     aws_session = AwsSession()
@@ -27,10 +28,10 @@ def quantum_sub_aws(num1, num2):
     s3.put_object(
         Bucket='your-quantum-results',  # Replace with your S3 bucket name
         Key='quantum_subtraction_results.txt',
-        Body=f"Difference of {num1} and {num2} is: {sum_result}\nQuantum Measurement: {result.measurement_counts}"
+        Body=f"Difference of {num1} and {num2} is: {sum_result}\nQuantum Measurement: {result.measurement_counts}\nExecution Finished\nProcess Completed"
     )
     
     print("Results (difference and quantum measurement) stored in S3")
 
 # Example usage
-quantum_sub_aws(7, 6)
+quantum_sub_aws(10, 6)
