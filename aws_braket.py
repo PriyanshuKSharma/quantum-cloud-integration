@@ -24,7 +24,7 @@ print("Measurement Counts:", result.measurement_counts)
 s3 = boto3.client('s3')
 s3.put_object(
     Bucket='your-quantum-results',  # Use your S3 bucket name
-    Key='bell_state_results.txt',
+    Key='quantum_bracket_results.txt',
     Body=str(result.measurement_counts)
 )
 
