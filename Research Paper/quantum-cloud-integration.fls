@@ -149,6 +149,9 @@ INPUT C:\Users\priya\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.s
 INPUT C:\Users\priya\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Users\priya\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\priya\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\quantum-cloud-integration.aux
+INPUT .\quantum-cloud-integration.aux
+INPUT quantum-cloud-integration.aux
 OUTPUT quantum-cloud-integration.aux
 INPUT C:\Users\priya\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\priya\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
