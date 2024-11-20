@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{geometry}
+\lstdefinelanguage{Dockerfile}{
+    morekeywords={FROM, RUN, CMD, LABEL, MAINTAINER, EXPOSE, ENV, ADD, COPY, ENTRYPOINT, VOLUME, USER, WORKDIR, ARG, ONBUILD, STOPSIGNAL, HEALTHCHECK, SHELL},
+    sensitive=true,
+    morecomment=[l]{#},
+    morestring=[b]"
+}
+
+\geometry{
+    a4paper,
+    left=1in,
+    right=1in,
+    top=1in,
+    bottom=1in
+}
+
+% Customizations for code blocks
+\lstset{
+    frame=single,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{blue},
+    commentstyle=\itshape\color{green!60!black},
+    stringstyle=\color{orange},
+    breaklines=true,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    tabsize=4
+}
+
+% Title page setup
+\newcommand{\mydegree}{Bachelor of Technology} % Replace with actual degree
+\newcommand{\degreename}{Information Technology} % Replace with actual department
+\newcommand{\mysupervisor}{Your Name} % Replace with your name or supervisor's name
+\newcommand{\mydep}{School of Engineering}
+
+\begin{document}
+
+% Title page
+\thispagestyle{empty}
+\begin{center}
+    {\large {\bfseries FSDC} \par}
+    \vspace{3\baselineskip}
+    {\textit{Quantum Counting}\\
+    \textit{FSDC}}\par
+    \vspace{\baselineskip}
+    {\large \bf \mydegree \par} 
+    \vspace{\baselineskip}
+    {\textit{in} \par}
+    \vspace{\baselineskip}
+    {{\large {\bf \degreename \\ }} \par}
+    \vspace{1.5\baselineskip}
+    {by \par}
+    \vspace{\baselineskip}
+    {{\large \bf \mysupervisor} \par}
+    \vspace{1.5\baselineskip}
+    {\begin{figure}[!h]
+        \centering
+        \includegraphics[width=40mm]{images\adypu.jpeg} % Replace with your college logo
+    \end{figure}}
+    \vspace{1.5\baselineskip}
+    {\bf \MakeUppercase{\mydep} \par}
+    \vspace{1ex}
+    {\bf \uppercase{Ajeenkya D Y Patil University} \par}
+\end{center}
+
+\newpage
+
+% Abstract
+\section*{Abstract}
+The advent of quantum computing is poised to revolutionize various sectors, including cloud computing. This paper explores the hybrid integration of quantum and classical cloud systems, focusing on the project *Quantum-Cloud Integration*. The project demonstrates the practical implementation of hybrid cloud-quantum systems, leveraging tools like Docker, IBM Quantum, and AWS to showcase how quantum capabilities can enhance traditional cloud infrastructure. This research highlights the framework, challenges, and potential impacts on cloud computing paradigms.
+
+\newpage
+
+% Main Sections
+\section{Introduction}
+Quantum computing represents a significant leap forward from classical computing, offering unparalleled computational power for specific problems. Cloud computing, on the other hand, provides scalable and accessible computational resources. The integration of these technologies can lead to innovative solutions for industries requiring high-performance computing.
+
+\subsection{Objectives}
+This paper aims to:
+\begin{itemize}
+    \item Examine the *Quantum-Cloud Integration* project.
+    \item Discuss the tools and methodologies employed.
+    \item Analyze the challenges and potential benefits of hybrid quantum-cloud systems.
+\end{itemize}
+
+\section{Methodology}
+\subsection{Framework Design}
+The integration framework is built using Docker containers to manage classical cloud workloads and IBM Quantum for quantum computations. A layered approach ensures seamless interaction between quantum resources and classical systems.
+
+\subsection{Tools and Technologies}
+\begin{itemize}
+    \item \textbf{Docker:} Containerization of cloud applications for easy deployment.
+    \item \textbf{IBM Quantum:} Access to quantum algorithms and processing power.
+    \item \textbf{AWS:} Classical cloud resources used for scalable storage and computational tasks.
+    \item \textbf{Python and Qiskit:} Programming quantum algorithms and orchestration.
+\end{itemize}
+
+\subsection{Workflow}
+Below is an example quantum workflow implemented in Python:
+
+\begin{tcolorbox}[title=Quantum Circuit Example]
+\begin{lstlisting}[language=Python]
+from qiskit import QuantumCircuit, Aer, execute
+
+# Create a simple quantum circuit
+qc = QuantumCircuit(2, 2)
+qc.h(0)  # Apply Hadamard gate
+qc.cx(0, 1)  # Apply CNOT gate
+qc.measure([0, 1], [0, 1])
+
+# Simulate the circuit on Aer simulator
+simulator = Aer.get_backend('qasm_simulator')
+result = execute(qc, simulator, shots=1024).result()
+
+# Get and display results
+counts = result.get_counts()
+print("Quantum Results:", counts)
+\end{lstlisting}
+\end{tcolorbox}
+
+\section{Implementation}
+\subsection{Docker Configuration}
+The Docker setup ensures an isolated environment for managing hybrid operations. Below is a snippet of the `Dockerfile`:
+
+\begin{tcolorbox}[title=Dockerfile Example]
+\begin{lstlisting}[language=Dockerfile]
+# Use an official Python runtime as the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy project requirements
+COPY requirements.txt ./
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code
+COPY . .
+
+# Define the command to run the application
+CMD ["python", "main.py"]
+\end{lstlisting}
+\end{tcolorbox}
+
+% Continue with Challenges, Implications, Future Scope, Conclusion, and References
+
+\end{document}
