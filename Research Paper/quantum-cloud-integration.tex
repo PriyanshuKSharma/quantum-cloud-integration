@@ -12,13 +12,25 @@
 \usepackage{tcolorbox} % For boxed content
 \usepackage[utf8]{inputenc}
 \usepackage{geometry} % To set page margins
+\usepackage{setspace} % For line spacing
+\usepackage{setspace} % For line spacing
 \geometry{a4paper, margin=1in}
 
 % Define placeholders if not already defined
+\newcommand{\mygraphicspath}{D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png}
 \newcommand{\mydegree}{Bachelor of Technology}
 \newcommand{\degreename}{Information Technology}
-\newcommand{\mysupervisor}{Your Name}
+\newcommand{\mysupervisor}{Priyanshu Kumar Sharma, Neha Gaikwad, Krishna Pandey, Paavani Bargoti}
 \newcommand{\mydep}{School of Engineering}
+\newcommand{\vregisternumber}{2022-B-17102004A, 2022-B-01112004, 2022-B-03102004A, 2022-B-23102003}
+\newcommand{\vspecialization}{Cloud Technology \& Information Security}
+\newcommand{\vdate}{November, 2024}
+\newcommand{\vcollege}{Ajeenkya D Y Patil University}
+\newcommand{\vtitle}{Quantum Cloud Integration: Potential Impact of Quantum Computing on Cloud Storage}
+\newcommand{\department}{School of Engineering}
+\newcommand{\vaddresslinei}{Pune, India}
+\newcommand{\vaddresslineii}{412105}    
+\newcommand{\vguide}{Professor Prini Rastogi}
 
 % Configure listings for code formatting
 \lstset{
@@ -37,37 +49,70 @@
 % Title Page
 \thispagestyle{empty}
 \begin{center}
-    {\large {\bfseries FSDC} \par}
-    \vspace{3\baselineskip}
-    {\textit{Quantum Counting}\\
-    \textit{FSDC}}\par
-    \vspace{\baselineskip}
-    {\large \bf \mydegree \par} 
-    \vspace{\baselineskip}
-    {\textit{in} \par}
-    \vspace{\baselineskip}
-    {{\large {\bf \degreename \\ }} \par}
-    \vspace{1.5\baselineskip}
-    {by \par}
-    \vspace{\baselineskip}
-    {{\large \bf \mysupervisor} \par}
-    \vspace{1.5\baselineskip}
+    % Logo of the University
     {\begin{figure}[!h]
         \centering
-        \includegraphics[width=40mm]{D:/SEM-5/FSDC/quantum-cloud-integration/images/adypu.jpeg}
+        \includegraphics[width=4.5cm]{\mygraphicspath}
     \end{figure}}
-    \vspace{1.5\baselineskip}
-    {\bf \MakeUppercase{\mydep} \par}
-    \vspace{1ex}
-    {\bf \uppercase{Ajeenkya D Y Patil University} \par}
+
+
+    {\large {\bfseries {\vtitle} \par}}
+
+
+    \vspace{3\baselineskip}
+    
+    A PROJECT REPORT\\[0.5cm]
+submitted by\\[0.5cm]
+\setstretch{1.25}
+    {\fontsize{14}{20}\selectfont \bfseries \mysupervisor}
+
+{(\bfseries \vregisternumber)}
+\quad\\
+to
+\begin{spacing}{1.25}
+the \textbf{\vcollege}\\
+
+in partial fulfillment of the requirements for the award of the Degree\\
+of\\
+\textbf{Bachelor of Technology}\\
+in\\
+\textbf{\vspecialization}
+\end{spacing}
+%
+\quad\\[0.5cm]
+
+\begin{spacing}{1.25}
+{\fontsize{14}{20}\selectfont\bfseries \department }\\
+
+\vaddresslinei\\
+\vaddresslineii\\
+{\fontsize{12}{20}\selectfont \vdate}\\
+\end{spacing}
+%%
 \end{center}
 
 \newpage
 
-% Abstract
-\section*{Abstract}
-The advent of quantum computing is poised to revolutionize various sectors, including cloud computing. This paper explores the hybrid integration of quantum and classical cloud systems, focusing on the project *Quantum-Cloud Integration*. The project demonstrates the practical implementation of hybrid cloud-quantum systems, leveraging tools like Docker, IBM Quantum, and AWS to showcase how quantum capabilities can enhance traditional cloud infrastructure. This research highlights the framework, challenges, and potential impacts on cloud computing paradigms.
 
+% Abstract
+{\begin{figure}[!h]
+    \centering
+    \includegraphics[width=4.5cm]{D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png}
+\end{figure}}
+
+\section*{Abstract}
+
+The \textbf{Quantum Cloud Integration: Potential Impact of Quantum Computing on Cloud Storage} project investigates the synergistic integration of quantum computing capabilities with classical cloud infrastructure, aiming to revolutionize storage and data processing paradigms. Quantum computing, known for its ability to tackle complex computational problems, is poised to complement the scalability and accessibility of classical cloud systems. This project highlights a hybrid architecture designed to enhance cloud storage efficiency, data security, and processing capabilities, leveraging quantum algorithms alongside traditional computational methods.  
+
+Key components of the project include:  \\
+1. \textbf{Quantum Workflow Implementation}: Quantum circuits are developed using Python and Qiskit to address specific computational tasks, such as optimizing data compression, encryption, and retrieval. The circuits interact seamlessly with classical resources, ensuring a hybrid computational workflow.  \\
+2. \textbf{Dockerized Integration Framework}: The entire system is containerized using Docker, enabling modularity, portability, and simplified deployment of hybrid quantum-cloud applications. This framework bridges the gap between classical cloud resources and quantum backends.  \\
+3. \textbf{Hybrid Resource Management}: The integration employs AWS for managing classical tasks, such as scalable storage and data handling, while IBM Quantum processes quantum-specific computations, such as Shor’s algorithm for factorization and Grover’s algorithm for search optimization.  \\
+4. \textbf{Secure Communication Protocols}: Advanced encryption and secure socket communication ensure robust data transfer between the classical and quantum systems, mitigating potential vulnerabilities in hybrid workflows.  
+
+The system demonstrates groundbreaking use cases, such as efficient data encryption using quantum key distribution (QKD), quantum-enhanced data indexing for cloud storage, and optimized workload distribution across hybrid resources. Challenges addressed include mitigating noise in quantum computations, managing classical-to-quantum transitions, and ensuring real-time responsiveness in hybrid tasks.  
+
+This research underscores the transformative potential of quantum computing in reshaping cloud storage strategies. It highlights how hybrid systems can achieve unparalleled efficiency and security, paving the way for innovative cloud architectures capable of handling future data demands in a quantum era.
 \newpage
 
 % Main Sections
