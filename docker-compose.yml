@@ -1,0 +1,17 @@
+version: '3.9'  # Specify the Compose file format version
+
+services:
+  quantum-cloud:
+    build:
+      context: .  # Use the current directory as the build context
+      dockerfile: Dockerfile  # Specify the Dockerfile name
+    container_name: quantum-cloud-container
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    working_dir: /app  # Set the working directory
+    command: python src/quantum_experiment.py  # Command to run your Python script
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}  # Set environment variables
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+    ports:
+      - "8000:8000"  # Expose ports if needed
