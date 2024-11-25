@@ -29,9 +29,10 @@
 \newcommand{\vtitle}{Quantum Cloud Integration: Potential Impact of Quantum Computing on Cloud Storage}
 \newcommand{\department}{School of Engineering}
 \newcommand{\vaddresslinei}{Pune, India}
-\newcommand{\vaddresslineii}{412105}    
+%\newcommand{\vaddresslineii}{412105}    
 \newcommand{\vguide}{Professor Prini Rastogi}
-%\newcommand{\quantum}{D:\SEM-5\FSDC\quantum-cloud-integration\images\quantum_vs_classical.png}
+\newcommand{\qubits}{D:/SEM-5/FSDC/quantum-cloud-integration/images/qubits_vs_bits.png}
+
 
 % Configure listings for code formatting
 \lstset{
@@ -176,14 +177,80 @@ Quantum computing represents a paradigm shift in computational power, leveraging
 Quantum computing is not just an incremental improvement over classical computing; it promises to solve problems that are currently intractable. Problems in areas like cryptography, optimization, and simulations can benefit from quantum algorithms that leverage superposition and entanglement, two key principles of quantum mechanics. These properties allow quantum computers to explore multiple solutions simultaneously, drastically reducing the time required for problem-solving in some cases.
 
 \subsection{Quantum Computing v/s Traditional Computers}
-Classical computers use binary bits (0 or 1) for computation, whereas quantum computers use quantum bits, or qubits, which can exist in multiple states at once due to superposition. This leads to exponential speedups for certain classes of problems. The comparison can be illustrated with the following figure:
+Classical computers use binary bits (0 or 1) for computation, whereas quantum computers use quantum bits, or qubits, which can exist in multiple states at once due to superposition. This leads to exponential speedups for certain classes of problems.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.2\textwidth]{D:\SEM-5\FSDC\quantum-cloud-integration\images\quantum_vs_classical.png}
-    \caption{Comparison of Quantum and Classical Computers}
-    \label{fig:quantum_vs_classical}
-\end{figure}
+\subsection{Traditional Computers: Mathematical Operations}
+
+In traditional computers, calculations are based on \textbf{classical bits}, which represent either 0 or 1. These bits undergo basic operations such as AND, OR, NOT, and XOR, forming the foundation for complex computations.
+
+\subsubsection{Key Operations:}
+
+\begin{itemize}
+    \item \textbf{Addition (Binary Addition):}
+    \begin{itemize}
+        \item The binary addition of two bits follows basic rules:
+        \[
+        0 + 0 = 0, \quad 0 + 1 = 1, \quad 1 + 0 = 1, \quad 1 + 1 = 10 \ (\text{carry the 1})
+        \]
+        \item Example:
+        \[
+        1101 + 1011 = 11000 \quad (\text{carry-over involved})
+        \]
+    \end{itemize}
+    
+    \item \textbf{Multiplication (Binary Multiplication):}
+    \begin{itemize}
+        \item Binary multiplication is similar to decimal multiplication but uses the rules for binary digits.
+        \item Example:
+        \[
+        1101 \ (\text{13 in decimal}) \\
+        \times 1011 \ (\text{11 in decimal}) \\
+        \text{Result:} \\
+        \ 1101 \quad (13) \\
+        0000  \quad (0) \\
+        1101  \quad (13) \\
+        1101  \quad (13) \\
+        \text{Final result:} \quad 10011111 \ (\text{143 in decimal})
+        \]
+    \end{itemize}
+    
+    \item \textbf{Bitwise Operations:}
+    \begin{itemize}
+        \item \textbf{AND:} 
+        \[
+        1 \ \text{AND} \ 1 = 1, \quad \text{else} \ 0
+        \]
+        \item \textbf{OR:} 
+        \[
+        1 \ \text{OR} \ 0 = 1, \quad \text{else} \ 0
+        \]
+        \item \textbf{NOT:} Inverts the bit: 
+        \[
+        \text{NOT} \ 0 = 1, \quad \text{NOT} \ 1 = 0
+        \]
+        \item \textbf{XOR:} 
+        \[
+        1 \ \text{XOR} \ 1 = 0, \quad 0 \ \text{XOR} \ 0 = 0, \quad 1 \ \text{XOR} \ 0 = 1, \quad 0 \ \text{XOR} \ 1 = 1
+        \]
+    \end{itemize}
+
+    \item \textbf{Shift Operations:}
+    \begin{itemize}
+        \item \textbf{Left Shift ($\ll$):} Moves all bits to the left, adding zeros to the right.
+        \[
+        1010 \ll 1 = 10100
+        \]
+        \item \textbf{Right Shift ($\gg$):} Moves all bits to the right, discarding the rightmost bits.
+        \[
+        1010 \gg 1 = 0101
+        \]
+    \end{itemize}
+\end{itemize}
+
+These operations are fundamental to all computational tasks in traditional computers, such as arithmetic, logic, data storage, and retrieval. However, they become inefficient for large-scale or complex problems that require exponential computational growth.
+
+
+
 
 \subsection{Qiskit: Quantum Programming Framework}
 Qiskit is an open-source quantum computing software development framework developed by IBM. It allows users to write quantum algorithms, simulate quantum circuits, and run them on real quantum computers. The reasons to use Qiskit include its comprehensive set of tools, ease of integration with other platforms, and access to IBM's quantum hardware for real-world applications. Here's a simple example of a quantum circuit created using Qiskit:
@@ -217,10 +284,15 @@ Here is a graphical representation comparing bits and qubits:
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{qubits_vs_bits.png}
+    \includegraphics[width=0.5\textwidth]{\qubits}
     \caption{Comparison of Qubits and Bits}
     \label{fig:qubits_vs_bits}
 \end{figure}
+
+\begin{itemize}
+    \item \textbf{Classical Bits:}Represented by the constant values 0 and 1, shown by the red and blue lines.
+    \item \textbf{Quantum Qubits:} Represented by a sine wave, demonstrating the concept of superposition, where the qubit can exist in multiple states simultaneously. This is shown by the green line.
+\end{itemize}
 \newpage
 \section{Quantum Computing Applications}
 Quantum computing has the potential to revolutionize various fields by solving complex problems that are currently unsolvable

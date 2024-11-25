@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.14)  25 NOV 2024 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.14)  25 NOV 2024 12:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -309,20 +309,20 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 No file quantum-cloud-integration.aux.
 \openout1 = `quantum-cloud-integration.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count296
@@ -381,8 +381,32 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png, id=4, 478.03593pt x 412.54124pt>
 File: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png Graphic file (type png)
 <use D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png>
-Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 55.
+Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 56.
 (pdftex.def)             Requested size: 128.0374pt x 110.49374pt.
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:89: Undefined control sequence.
+<recently read> \vaddresslineii 
+                                
+l.89 \vaddresslineii
+                    \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:89: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 \vaddresslineii\\
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 
 [1
@@ -390,16 +414,16 @@ Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LO
 {C:/Users/priya/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png>]
 File: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png Graphic file (type png)
 <use D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png>
-Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 97.
+Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 98.
 (pdftex.def)             Requested size: 128.0374pt x 110.49374pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 118.
+(Font)              <12> on input line 119.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 118.
+(Font)              <8> on input line 119.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 118.
+(Font)              <6> on input line 119.
 
-Overfull \hbox (19.74141pt too wide) in paragraph at lines 117--123
+Overfull \hbox (19.74141pt too wide) in paragraph at lines 118--124
 [] 
  []
 
@@ -408,239 +432,84 @@ Overfull \hbox (19.74141pt too wide) in paragraph at lines 117--123
 [2]
 File: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png Graphic file (type png)
 <use D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png>
-Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 130.
+Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 131.
 (pdftex.def)             Requested size: 128.0374pt x 110.49374pt.
 
 
 [3]
 File: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png Graphic file (type png)
 <use D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png>
-Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 151.
+Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/ADYPU_LOGO.png  used on input line 152.
 (pdftex.def)             Requested size: 128.0374pt x 110.49374pt.
 
-Overfull \hbox (5.70462pt too wide) in paragraph at lines 168--169
+Overfull \hbox (5.70462pt too wide) in paragraph at lines 169--170
 []\OT1/cmr/bx/n/12 Hybrid Model\OT1/cmr/m/n/12 : Com-bines quan-tum and clas-si-cal re-sources, lever-ag-ing the strengths
  []
 
 
 
 [4]
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM 
-                 -5FSDC quantum -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:193: Undefined control sequence.
+l.193 ...quad 1 + 0 = 1, \quad 1 + 1 = 10 \ (\text
+                                                  {carry the 1})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM -5FSDC 
-                        quantum -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:197: Undefined control sequence.
+l.197         1101 + 1011 = 11000 \quad (\text
+                                              {carry-over involved})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM -5FSDC quantum 
-                                -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:206: Undefined control sequence.
+l.206         1101 \ (\text
+                           {13 in decimal}) \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> ...DC quantum -cloud-integrationimages 
-                                                  quantum _vs_classical.png
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:207: Undefined control sequence.
+l.207         \times 1011 \ (\text
+                                  {11 in decimal}) \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> ...um -cloud-integrationimages quantum 
-                                                  _vs_classical.png
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:208: Undefined control sequence.
+<recently read> \text 
+                      
+l.208         \text
+                   {Result:} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM 
-                 -5FSDC quantum -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:213: Undefined control sequence.
+<recently read> \text 
+                      
+l.213         \text
+                   {Final result:} \quad 10011111 \ (\text{143 in decimal})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM -5FSDC 
-                        quantum -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM -5FSDC quantum 
-                                -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> ...DC quantum -cloud-integrationimages 
-                                                  quantum _vs_classical.png
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> ...um -cloud-integrationimages quantum 
-                                                  _vs_classical.png
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM 
-                 -5FSDC quantum -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM -5FSDC 
-                        quantum -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> D:SEM -5FSDC quantum 
-                                -cloud-integrationimages quantum _vs_classic...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> ...DC quantum -cloud-integrationimages 
-                                                  quantum _vs_classical.png
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<argument> ...um -cloud-integrationimages quantum 
-                                                  _vs_classical.png
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<write> 
-LaTeX Warning: File `D:\SEM 
-                                     -5\FSDC \quantum -cloud-integration\ima...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<write> 
-LaTeX Warning: File `D:\SEM -5\FSDC 
-                                             \quantum -cloud-integration\ima...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<write> ...Warning: File `D:\SEM -5\FSDC \quantum 
-                                                  -cloud-integration\images ...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<write> ...SDC \quantum -cloud-integration\images 
-                                                  \quantum _vs_classical.png...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Undefined control sequence.
-<write> ...tum -cloud-integration\images \quantum 
-                                                  _vs_classical.png' not fou...
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:213: Undefined control sequence.
+l.213 ...xt{Final result:} \quad 10011111 \ (\text
+                                                  {143 in decimal})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -648,55 +517,125 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: File `D:-5-cloud-integration_vs_classical.png' not found on input line 183.
+Overfull \hbox (279.947pt too wide) detected at line 214
+\OT1/cmr/m/n/12 1101 ([])[]  \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 1011 ([])[] [][]  1101 (13)[] 0000 (0)[] 1101 (13)[] 1101 (13)[] [] 10011111 ([])
+ []
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:221: Undefined control sequence.
+l.221         1 \ \text
+                       {AND} \ 1 = 1, \quad \text{else} \ 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:221: Undefined control sequence.
+l.221         1 \ \text{AND} \ 1 = 1, \quad \text
+                                                 {else} \ 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:225: Undefined control sequence.
+l.225         1 \ \text
+                       {OR} \ 0 = 1, \quad \text{else} \ 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:225: Undefined control sequence.
+l.225         1 \ \text{OR} \ 0 = 1, \quad \text
+                                                {else} \ 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:229: Undefined control sequence.
+l.229         \text
+                   {NOT} \ 0 = 1, \quad \text{NOT} \ 1 = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:229: Undefined control sequence.
+l.229         \text{NOT} \ 0 = 1, \quad \text
+                                             {NOT} \ 1 = 0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:183: Package pdftex.def Error: File `D:-5-cloud-integration_vs_classical.png' not found: using draft setting.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.183 ...egration\images\quantum_vs_classical.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[5]
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:233: Undefined control sequence.
+l.233         1 \ \text
+                       {XOR} \ 1 = 0, \quad 0 \ \text{XOR} \ 0 = 0, \quad 1 ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:233: Undefined control sequence.
+l.233 ...  1 \ \text{XOR} \ 1 = 0, \quad 0 \ \text
+                                                  {XOR} \ 0 = 0, \quad 1 \ \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:233: Undefined control sequence.
+l.233 ...d 0 \ \text{XOR} \ 0 = 0, \quad 1 \ \text
+                                                  {XOR} \ 0 = 1, \quad 0 \ \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:233: Undefined control sequence.
+l.233 ...d 1 \ \text{XOR} \ 0 = 1, \quad 0 \ \text
+                                                  {XOR} \ 1 = 1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/05/25 1.10b listings language file
 )
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 193.
-
-
-[5]
-
-LaTeX Warning: File `qubits_vs_bits.png' not found on input line 220.
-
-
-d:/SEM-5/FSDC/quantum-cloud-integration/Project Report/quantum-cloud-integration.tex:220: Package pdftex.def Error: File `qubits_vs_bits.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 ...[width=0.8\textwidth]{qubits_vs_bits.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 260.
 
 
 [6]
+<D:/SEM-5/FSDC/quantum-cloud-integration/images/qubits_vs_bits.png, id=33, 518.8986pt x 397.84634pt>
+File: D:/SEM-5/FSDC/quantum-cloud-integration/images/qubits_vs_bits.png Graphic file (type png)
+<use D:/SEM-5/FSDC/quantum-cloud-integration/images/qubits_vs_bits.png>
+Package pdftex.def Info: D:/SEM-5/FSDC/quantum-cloud-integration/images/qubits_vs_bits.png  used on input line 287.
+(pdftex.def)             Requested size: 226.48395pt x 173.64453pt.
 
-[7]
+
+[7 <D:/SEM-5/FSDC/quantum-cloud-integration/images/qubits_vs_bits.png>]
 
 [8]
 
-[9] (quantum-cloud-integration.aux)
+[9]
+
+[10] (quantum-cloud-integration.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
@@ -707,17 +646,17 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14629 strings out of 473938
- 294447 string characters out of 5727391
- 2116893 words of memory out of 5000000
- 37244 multiletter control sequences out of 15000+600000
+ 14572 strings out of 473938
+ 292592 string characters out of 5727391
+ 2075893 words of memory out of 5000000
+ 37187 multiletter control sequences out of 15000+600000
  562997 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,6n,87p,778b,1506s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\priya\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on quantum-cloud-integration.pdf (9 pages, 436345 bytes).
+ 83i,6n,87p,778b,1507s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\priya\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on quantum-cloud-integration.pdf (10 pages, 543777 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
