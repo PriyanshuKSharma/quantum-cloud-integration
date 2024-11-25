@@ -39,8 +39,8 @@ jobs:
     # Set up AWS credentials
     - name: Configure AWS Credentials
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{AKIAXTORPNDT6JYARHV4 }}
+        AWS_SECRET_ACCESS_KEY: ${{ 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 }}
 
     # Upload the quantum results to AWS S3
     - name: Upload to AWS S3
