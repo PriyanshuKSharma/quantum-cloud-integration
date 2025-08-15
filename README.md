@@ -125,4 +125,4 @@ Feel free to submit issues or pull requests if you find bugs or have suggestions
 
 ## License
 
-This project is not licensed.
+This project is for research purposes.
