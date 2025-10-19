@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.14)  16 OCT 2025 12:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.14)  19 OCT 2025 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -22,6 +22,7 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 50
 (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+** ATTENTION: Single column mode is not typically used with IEEE publications.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen144
@@ -676,8 +677,7 @@ File: lstlang1.sty 2024/05/25 1.10b listings language file
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count341
 \l__pdf_internal_box=\box102
-)
-No file quantum_cloud_review_paper.aux.
+) (quantum_cloud_review_paper.aux)
 \openout1 = `quantum_cloud_review_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -698,7 +698,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
--- Lines per column: 56 (exact).
+
+-- Lines per column: 58 (exact).
 (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count342
@@ -729,23 +730,71 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@posthook=\toks42
 )
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+LaTeX Warning: Citation `preskill2018' on page 1 undefined on input line 74.
+
+
+
+[1{C:/Users/priya/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+
+LaTeX Warning: Citation `arute2019' on page 2 undefined on input line 76.
+
+
+LaTeX Warning: Citation `aws_braket' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `ibm_quantum' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `google_quantum' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `cerezo2021' on page 2 undefined on input line 86.
+
+
+LaTeX Warning: Citation `hybrid_algorithms' on page 2 undefined on input line 86.
+
+
+LaTeX Warning: Citation `quantum_ml' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Citation `preskill2018' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Citation `bharti2022' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Citation `quantum_error' on page 2 undefined on input line 92.
+
+
+LaTeX Warning: Citation `preskill2018' on page 2 undefined on input line 92.
+
+
+LaTeX Warning: Citation `endo2021' on page 2 undefined on input line 92.
+
+
+LaTeX Warning: Citation `hybrid_algorithms' on page 2 undefined on input line 94.
+
+
+LaTeX Warning: Citation `cerezo2021' on page 2 undefined on input line 94.
+
+
+LaTeX Warning: Citation `endo2021' on page 2 undefined on input line 94.
+
+
+LaTeX Warning: Citation `quantum_security' on page 2 undefined on input line 96.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 113.
 (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 113.
  (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 4531) in paragraph at lines 69--70
-[]\OT1/ptm/m/n/10 Analyze the per-for-mance char-ac-ter-is-tics of hy-brid
- []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 127.
-(C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+[2]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 158.
+ (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
@@ -753,97 +802,71 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[1{C:/Users/priya/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/priya/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
-
-
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
+[3]
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 261.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 261.
-(C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+            Default family used instead on input line 292.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 292.
+ (C:\Users\priya\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 261.
+            Default family used instead on input line 292.
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 261.
+            Default family used instead on input line 292.
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 261.
+            Default family used instead on input line 292.
 
 
-d:/SEM-6/quantum-cloud-integration/Review Paper Final/quantum_cloud_review_paper.tex:261: LaTeX Error: Unicode character σ (U+03C3)
+d:/SEM-6/quantum-cloud-integration/Review Paper Final/quantum_cloud_review_paper.tex:292: LaTeX Error: Unicode character σ (U+03C3)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.261 }
+l.292 }
        
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 267.
+            Default family used instead on input line 297.
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 267.
+            Default family used instead on input line 297.
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 268.
+            Default family used instead on input line 297.
 LaTeX Info: Symbol \textrangle not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 268.
-
-Underfull \hbox (badness 6725) in paragraph at lines 274--275
- \OT1/ptm/m/it/10 2) Per-for-mance Met-rics: [][][] \OT1/ptm/m/n/10 Com-pre-hen-sive per-for-mance
- []
-
+            Default family used instead on input line 297.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
 []\OT1/ptm/b/n/8 Download
  []
 
 
 
-[2]
+[4]
 
+[5] (quantum_cloud_review_paper.bbl)
 
-
-[3]
-
-(quantum_cloud_review_paper.bbl)
-
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
-
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-
-
-[4] (quantum_cloud_review_paper.aux)
+[6] (quantum_cloud_review_paper.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -855,14 +878,14 @@ Package rerunfilecheck Warning: File `quantum_cloud_review_paper.out' has change
 
 Package rerunfilecheck Info: Checksums for `quantum_cloud_review_paper.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  09D67826EA0E955C7621667738ACBE59;8445.
+(rerunfilecheck)             After:  2D38CCBDE7F1E61CB89FA4C706C3CA7C;9669.
  ) 
 Here is how much of TeX's memory you used:
- 30782 strings out of 473938
- 643048 string characters out of 5727391
- 2143893 words of memory out of 5000000
- 53014 multiletter control sequences out of 15000+600000
- 599483 words of font info for 117 fonts, out of 8000000 for 9000
+ 30809 strings out of 473938
+ 643451 string characters out of 5727391
+ 2088893 words of memory out of 5000000
+ 53019 multiletter control sequences out of 15000+600000
+ 601679 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,11n,99p,1403b,1426s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,11n,99p,1422b,1433s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\priya\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk>
