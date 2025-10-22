@@ -36,7 +36,7 @@
     \IEEEauthorblockN{Priyanshu Kumar Sharma, Neha Gaikwad}
     
     \vspace{10pt}
-    \IEEEauthorblockN{Guide: Prini Rastogi}
+    % \IEEEauthorblockN{Guide: Prini Rastogi}
     \IEEEauthorblockA{
         \textit{Ajeenkya D Y Patil University} \\
         Pune, India \\
@@ -146,70 +146,11 @@ The system is containerized using Docker to ensure portability and consistent de
 
 \subsubsection{Quantum Circuit Implementation}
 
-The core quantum functionality is implemented using AWS Braket, which provides access to quantum simulators and hardware. The primary quantum circuit implemented is a Bell state preparation:
-
-\begin{figure}[h]
-\centering
-\setlength{\fboxsep}{8pt}
-\textbf{Code 1: Bell State Circuit Implementation}
-\vspace{3pt}
-\hrule
-\vspace{3pt}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\scriptsize, breaklines=true]
-from braket.aws import AwsDevice, AwsSession
-from braket.circuits import Circuit
-import boto3
-
-# Initialize AWS session
-aws_session = AwsSession()
-
-# Select quantum device (simulator)
-device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/sv1")
-
-# Create Bell state circuit
-bell_circuit = Circuit().h(0).cnot(0, 1)
-
-# Execute circuit with 100 measurements
-task = device.run(bell_circuit, shots=100)
-result = task.result()
-
-# Display measurement results
-print("Measurement Counts:", result.measurement_counts)
-\end{lstlisting}
-\end{figure}
-
-This implementation creates a maximally entangled two-qubit state, demonstrating fundamental quantum phenomena within the cloud infrastructure.
+The core quantum functionality is implemented using AWS Braket, which provides access to quantum simulators and hardware. The primary quantum circuit implemented is a Bell state preparation that creates a maximally entangled two-qubit state, demonstrating fundamental quantum phenomena within the cloud infrastructure. The implementation utilizes AWS Braket SDK to initialize quantum sessions, select appropriate quantum devices, create quantum circuits with Hadamard and CNOT gates, and execute measurements with specified shot counts.
 
 \subsubsection{Cloud Storage Integration}
 
-Results from quantum computations are automatically stored in AWS S3 for persistence and further analysis:
-
-\begin{figure}[h]
-\centering
-\setlength{\fboxsep}{8pt}
-\textbf{Code 2: Cloud Storage Implementation}
-\vspace{3pt}
-\hrule
-\vspace{3pt}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\scriptsize, breaklines=true]
-# Store quantum results in S3
-s3 = boto3.client('s3')
-s3.put_object(
-    Bucket='quantum-results-bucket',
-    Key='bell_state_results.txt',
-    Body=str(result.measurement_counts)
-)
-
-def upload_to_s3(file_path, object_name):
-    s3_client = boto3.client("s3")
-    try:
-        s3_client.upload_file(file_path, AWS_S3_BUCKET, 
-                             object_name)
-        print(f"File uploaded successfully")
-    except Exception as e:
-        print(f"Upload error: {e}")
-\end{lstlisting}
-\end{figure}
+Results from quantum computations are automatically stored in AWS S3 for persistence and further analysis. The cloud storage integration utilizes AWS Boto3 SDK to establish S3 client connections, upload quantum measurement results to designated storage buckets, and implement error handling mechanisms for reliable data persistence. The system supports automated file uploads with proper exception handling and success verification.
 
 \subsubsection{Containerization Strategy}
 
@@ -235,12 +176,12 @@ The experimental environment consists of:
 
 Multiple quantum circuits were executed to evaluate system performance:
 
-\begin{center}
+\begin{itemize}
     1. \textbf{Bell State Preparation}: Two-qubit entangled state creation and measurement 
     \newline
     2. \textbf{Quantum Superposition}: Single-qubit Hadamard gate application \newline
     3. \textbf{Multi-qubit Circuits}: Scaling tests with 4, 8, and 16 qubits
-\end{center}
+\end{itemize}
     
     
 Each circuit was executed with varying shot counts (100, 500, 1000) to analyze measurement statistics and execution time scaling.
