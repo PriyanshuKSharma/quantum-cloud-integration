@@ -64,8 +64,23 @@ To run this project, you need the following installed on your local machine:
      docker run -it quantum-cloud
      ```
 
-4. **Configure AWS and IBM Quantum**:
-   - Make sure to configure your AWS credentials and set up access to your IBM Quantum account.
+4. **Configure AWS CLI**:
+   ```bash
+   aws configure
+   ```
+   Enter your AWS credentials:
+   - AWS Access Key ID
+   - AWS Secret Access Key
+   - Default region: `us-east-1` (recommended for Braket)
+   - Default output format: `json`
+
+5. **AWS Braket Service Role Setup**:
+   For AWS Braket access, create the service role:
+   - Visit: https://console.aws.amazon.com/braket/home#/permissions?tab=executionRoles
+   - Create `AWSServiceRoleForAmazonBraket` role
+   
+   **Alternative - Local Simulator**:
+   The project includes local quantum simulation that works without AWS setup.
 
 ## Dockerfile
 
@@ -110,6 +125,8 @@ pandas==1.4.2
 - **Dockerized Environment**: Run the project in a container for easier setup and scalability.
 
 ## Usage
+
+**For detailed CLI setup instructions, see [CLI_SETUP.md](CLI_SETUP.md)**
 
 Once you have set up the environment, you can start interacting with the hybrid system using the provided Python scripts. Here’s how to run a basic experiment:
 
