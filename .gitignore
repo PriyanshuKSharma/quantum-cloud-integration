@@ -1,2 +1,27 @@
-quantum-env
-.env
+# LaTeX build files
+*.fdb_latexmk
+*.synctex(busy)
+*.synctex.gz
+*.aux
+*.log
+*.out
+*.toc
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
