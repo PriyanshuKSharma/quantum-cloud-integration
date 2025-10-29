@@ -23,15 +23,19 @@ def quantum_sub_aws(num1, num2):
     result = task.result()
     print("Quantum Measurement Counts:", result.measurement_counts)
     
-    # Step 6: Store both the addition result and quantum measurement in S3
-    s3 = boto3.client('s3')
-    s3.put_object(
-        Bucket='your-quantum-results',  # Replace with your S3 bucket name
-        Key='quantum_subtraction_results.txt',
-        Body=f"Difference of {num1} and {num2} is: {sum_result}\nQuantum Measurement: {result.measurement_counts}\nExecution Finished\nProcess Completed"
-    )
     
-    print("Results (difference and quantum measurement) stored in S3")
+    # Step 6: Store both the subtraction result and quantum measurement in S3
+    try:
+        s3 = boto3.client('s3')
+        s3.put_object(
+            Bucket='quantum-kmeans-bucket-research',
+            Key='quantum_subtraction_results.txt',
+            Body=f"Difference of {num1} and {num2} is: {sum_result}\nQuantum Measurement: {result.measurement_counts}\nExecution Finished\nProcess Completed"
+        )
+        print("Results (difference and quantum measurement) stored in S3")
+    except Exception as e:
+        print(f"Failed to store in S3: {e}")
+
 
 # Example usage
 quantum_sub_aws(10, 6)
