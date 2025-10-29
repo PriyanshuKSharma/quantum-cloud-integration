@@ -12,6 +12,16 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Python virtual environments
+quantum-env/
+src/quantum-env/
+venv/
+env/
+
+# Environment variables
+.env
+.env.local
+
 # Terraform
 .terraform/
 .terraform.lock.hcl
