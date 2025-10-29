@@ -1,31 +1,42 @@
-from braket.aws import AwsDevice, AwsSession
 from braket.circuits import Circuit
+from braket.devices import LocalSimulator
 import boto3
+import os
 
-# Initialize the AWS session (no region_name argument)
-aws_session = AwsSession()
-
-# Choose the device using the AWS session
-device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/sv1")
+# Use local simulator instead of AWS
+device = LocalSimulator()
 
 # Create a simple quantum circuit (e.g., Bell State)
 bell_circuit = Circuit().h(0).cnot(0, 1)
 
-# Run the circuit on the chosen device
-task = device.run(bell_circuit, shots=100)
+# Run the circuit on the local simulator
+result = device.run(bell_circuit, shots=100)
 
-# Get the result of the quantum task
-result = task.result()
+# Get the result and measurement counts
+task_result = result.result()
+measurement_counts = task_result.measurement_counts
 
 # Print the measurement results
-print("Measurement Counts:", result.measurement_counts)
+print("Measurement Counts:", measurement_counts)
 
-# Store the results in S3
-s3 = boto3.client('s3')
-s3.put_object(
-    Bucket='your-quantum-results',  # Use your S3 bucket name
-    Key='bell_state_results.txt',
-    Body=str(result.measurement_counts)
-)
+# Create results directory if it doesn't exist
+os.makedirs('results', exist_ok=True)
 
-print("Results stored in S3")
+# Store the results in results directory
+with open('results/bell_state_results.txt', 'w') as f:
+    f.write(str(measurement_counts))
+
+print("Results stored in results/bell_state_results.txt")
+
+# Store results in S3 bucket
+try:
+    s3 = boto3.client('s3')
+    bucket_name = os.getenv('AWS_S3_BUCKET', 'quantum-kmeans-bucket-research')
+    s3.put_object(
+        Bucket=bucket_name,
+        Key='quantum_results/bell_state_results.txt',
+        Body=str(measurement_counts)
+    )
+    print(f"Results also stored in S3 bucket: {bucket_name}")
+except Exception as e:
+    print(f"Failed to store in S3: {e}")
