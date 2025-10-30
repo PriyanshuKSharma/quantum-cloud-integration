@@ -1,12 +1,12 @@
 # Fdb version 4
-["bibtex quantum_cloud_review_paper"] 1760939971.37275 "quantum_cloud_review_paper.aux" "quantum_cloud_review_paper.bbl" "quantum_cloud_review_paper" 1760939972.45692 2
+["bibtex quantum_cloud_review_paper"] 1761719106.77581 "quantum_cloud_review_paper.aux" "quantum_cloud_review_paper.bbl" "quantum_cloud_review_paper" 1761719107.34881 2
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/bibtex/bib/feupphdteses/references.bib" 1366811700 2206 985e03fb36d872d306e76cfacc160693 ""
-  "quantum_cloud_review_paper.aux" 1760939971.34767 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "quantum_cloud_review_paper.aux" 1761719106.76906 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "quantum_cloud_review_paper.bbl"
   "quantum_cloud_review_paper.blg"
   (rewritten before read)
-["pdflatex"] 1760939960.60185 "d:/SEM-6/quantum-cloud-integration/Review Paper Final/quantum_cloud_review_paper.tex" "quantum_cloud_review_paper.pdf" "quantum_cloud_review_paper" 1760939966.65088 2
+["pdflatex"] 1761719100.31095 "d:/SEM-6/quantum-cloud-integration/Review Paper Final/quantum_cloud_review_paper.tex" "quantum_cloud_review_paper.pdf" "quantum_cloud_review_paper" 1761719105.47186 2
   "C:/Users/priya/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1739430656.05031 11548 b8ba022be4a35e00644ff616c69f91b0 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -107,6 +107,8 @@
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty" 1717270513 5525 3792dcd5bc92158cfaf00cc591e557cf ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1717270513 5048 7ebf0f2edf1ef6783e8fe2201a95d0e8 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1717270513 2846 50113a9b2387b6447504672739a4a25b ""
+  "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1696169587 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
+  "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1696169587 72619 ee90b6612147680fd73c3b1406a74245 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/cite/cite.sty" 1425353482 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/environ/environ.sty" 1399192161 4378 f429f0da968c278653359293040a8f52 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
@@ -146,6 +148,7 @@
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.sty" 1673775190 348 ee405e64380c11319f0e249fed57e6c5 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.sty" 1673775190 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1673775190 325 f9f16d12354225b7dd52a3321f085955 ""
+  "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1pcr.fd" 1585253778 1025 cfb5a7799d4001859dd60898d37ec67c ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 39eda417ef5837ce5e38661cfad2cedf ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ts1ptm.fd" 1585253778 653 3c2b212581b38326a2d43769c35b19e7 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
@@ -173,9 +176,9 @@
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/priya/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "d:/SEM-6/quantum-cloud-integration/Review Paper Final/quantum_cloud_review_paper.tex" 1760939960.46991 27689 07cf37efa89ce2215592419d012ee05f ""
-  "quantum_cloud_review_paper.aux" 1760939971.34767 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "quantum_cloud_review_paper.bbl" 1760939972.3178 0 d41d8cd98f00b204e9800998ecf8427e "bibtex quantum_cloud_review_paper"
+  "d:/SEM-6/quantum-cloud-integration/Review Paper Final/quantum_cloud_review_paper.tex" 1761719098.34957 74289 e369e309a5af8eb49c012f828fd4f50c ""
+  "quantum_cloud_review_paper.aux" 1761719106.76906 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "quantum_cloud_review_paper.bbl" 1761719107.25956 0 d41d8cd98f00b204e9800998ecf8427e "bibtex quantum_cloud_review_paper"
   "quantum_cloud_review_paper.out" 0 -1 0 "pdflatex"
   (generated)
   "quantum_cloud_review_paper.aux"
