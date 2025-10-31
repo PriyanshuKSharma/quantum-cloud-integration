@@ -3,6 +3,7 @@
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
+\usepackage{algorithm}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
@@ -12,6 +13,7 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
 \usepackage{caption}
+
 \captionsetup{justification=centering}
 
 \lstset{
@@ -163,48 +165,7 @@ The literature lacks comprehensive frameworks for quantum-cloud system design an
 
 Containerization and orchestration of quantum workloads represent emerging research areas with limited existing work. The unique requirements of quantum computing, such as calibration procedures and quantum state management, present new challenges for traditional cloud orchestration systems.
 
-\section{Methodology}
-
-The methodology for implementing Cross-Platform Function as a Service (XFaaS) quantum-cloud integration encompasses comprehensive system design, multi-cloud orchestration framework development, and empirical evaluation protocols. The approach extends traditional single-provider quantum-cloud architectures by enabling simultaneous execution across AWS Lambda, Azure Functions, and Google Cloud Functions while maintaining optimal performance characteristics for each platform.
-
-\subsection{Test Environment Setup}
-
-The experimental environment consists of multiple cloud provider configurations to enable comprehensive XFaaS evaluation:
-\begin{itemize}
-    \item AWS Braket SV1 quantum simulator (32-qubit capacity) with Lambda execution environment
-    \item Azure Functions with Qiskit local simulators and Blob Storage integration
-    \item Google Cloud Functions with Cirq quantum simulation capabilities
-    \item Docker containers running on Ubuntu 20.04 LTS for consistent deployment
-    \item Python 3.9 with platform-specific SDKs (Braket, Qiskit, Cirq) and cloud libraries
-\end{itemize}
-
-\subsection{Experimental Procedures}
-
-\subsubsection{Cross-Platform Quantum Circuit Execution Tests}
-
-Multiple quantum circuits were executed across all three cloud platforms to evaluate XFaaS performance:
-
-\begin{itemize}
-    \item \textbf{Bell State Preparation}: Two-qubit entangled state creation and measurement across platforms
-    \item \textbf{Quantum Superposition}: Single-qubit Hadamard gate application with cross-platform validation
-    \item \textbf{Multi-qubit Circuits}: Scaling tests with 4, 8, and 16 qubits across AWS, Azure, and GCP
-    \item \textbf{Consensus Analysis}: Statistical comparison of results across different cloud providers
-\end{itemize}
-
-Each circuit was executed with varying shot counts (100, 500, 1000) to analyze measurement statistics, execution time scaling, and cross-platform consistency.
-
-\subsubsection{XFaaS Performance Evaluation}
-
-XFaaS-specific performance metrics were evaluated through:
-\begin{itemize}
-    \item Cross-platform execution latency measurements
-    \item Failover mechanism testing and recovery time analysis
-    \item Result consistency validation across multiple providers
-    \item Cost optimization analysis through dynamic provider selection
-    \item Concurrent multi-platform execution testing
-\end{itemize}
-
-\subsection{XFaaS Architecture Design}
+\section{Methodology and Implementation}
 
 The Cross-Platform Function as a Service (XFaaS) architecture extends the traditional quantum-cloud integration by enabling quantum workloads to execute across multiple cloud providers simultaneously. The XFaaS methodology addresses vendor lock-in concerns while providing enhanced fault tolerance and performance comparison capabilities across AWS Lambda, Azure Functions, and Google Cloud Functions.
 
@@ -214,80 +175,47 @@ The XFaaS orchestration framework implements a unified interface for managing qu
 
 The XFaaS Manager abstracts platform-specific APIs and provides standardized interfaces for function deployment and execution. Each cloud provider requires distinct authentication mechanisms, deployment procedures, and invocation protocols. The manager encapsulates these differences while maintaining optimal performance characteristics for each platform.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
-\resizebox{0.8\textwidth}{!}{
-\begin{tikzpicture}[node distance=2cm, auto]
-    % Define styles
-    \tikzstyle{cloud} = [rectangle, draw=blue!80, fill=blue!20, text width=2.8cm, text centered, rounded corners, minimum height=2cm]
-    \tikzstyle{quantum} = [rectangle, draw=green!80, fill=green!20, text width=2.2cm, text centered, rounded corners, minimum height=1.2cm]
-    \tikzstyle{manager} = [rectangle, draw=red!80, fill=red!20, text width=3cm, text centered, rounded corners, minimum height=1.5cm]
+\resizebox{0.57\textwidth}{!}{
+\begin{tikzpicture}[node distance=2.8cm, auto]
+    \tikzstyle{cloud} = [rectangle, draw=blue!80, fill=blue!20, text width=2.2cm, text centered, rounded corners, minimum height=1.5cm]
+    \tikzstyle{quantum} = [rectangle, draw=green!80, fill=green!20, text width=2cm, text centered, rounded corners, minimum height=1cm]
+    \tikzstyle{manager} = [rectangle, draw=red!80, fill=red!20, text width=2.5cm, text centered, rounded corners, minimum height=1.2cm]
     \tikzstyle{arrow} = [thick,->,>=stealth]
     
-    % Cloud Providers
-    \node [cloud] (aws) {\textbf{AWS Lambda}\\\\Braket\\Quantum\\Simulator};
-    \node [cloud, right of=aws, node distance=4cm] (azure) {\textbf{Azure Functions}\\\\Qiskit\\Simulator};
-    \node [cloud, right of=azure, node distance=4cm] (gcp) {\textbf{GCP Functions}\\\\Qiskit\\Simulator};
+    % Cloud Providers - Horizontal
+    \node [cloud] (aws) {\textbf{AWS Lambda}\\Braket Quantum\\Simulator};
+    \node [cloud, right of=aws, node distance=3.5cm] (azure) {\textbf{Azure Functions}\\Qiskit\\Simulator};
+    \node [cloud, right of=azure, node distance=3.5cm] (gcp) {\textbf{GCP Functions}\\Qiskit\\Simulator};
     
-    % Quantum Components
-    \node [quantum, below of=aws, node distance=1.5cm] (aws_q) {Bell State\\Circuits};
-    \node [quantum, below of=azure, node distance=1.5cm] (azure_q) {Quantum\\Algorithms};
-    \node [quantum, below of=gcp, node distance=1.5cm] (gcp_q) {Measurement\\Results};
+    % Quantum Components - Below
+    \node [quantum, below of=aws] (bell) {Bell State\\Circuits};
+    \node [quantum, below of=azure] (algo) {Quantum\\Algorithms};
+    \node [quantum, below of=gcp] (measure) {Measurement\\Results};
     
-    % XFaaS Manager
-    \node [manager, below of=azure, node distance=4cm] (xfaas) {\textbf{XFaaS Manager}\\\& Orchestrator};
+    % XFaaS Manager - Bottom Center
+    \node [manager, below of=algo, node distance=2.5cm] (xfaas) {\textbf{XFaaS Manager}\\\& Orchestrator};
     
-    % Connections within cloud providers
-    \draw [arrow, blue!70] (aws) -- (aws_q);
-    \draw [arrow, blue!70] (azure) -- (azure_q);
-    \draw [arrow, blue!70] (gcp) -- (gcp_q);
+    % Connections
+    \draw [arrow, blue!70] (aws) -- (bell);
+    \draw [arrow, blue!70] (azure) -- (algo);
+    \draw [arrow, blue!70] (gcp) -- (measure);
     
-    % Connections to XFaaS Manager
-    \draw [arrow, red!70] (aws_q) -- (xfaas) node[midway, left=2mm] {\footnotesize Results};
-    \draw [arrow, red!70] (azure_q) -- (xfaas);
-    \draw [arrow, red!70] (gcp_q) -- (xfaas) node[midway, right=2mm] {\footnotesize Aggregation};
-    
-    % Bidirectional arrows for orchestration
-    \draw [arrow, red!70] (xfaas) -- (aws_q) node[midway, left=2mm] {\footnotesize Deploy};
-    \draw [arrow, red!70] (xfaas) -- (azure_q);
-    \draw [arrow, red!70] (xfaas) -- (gcp_q) node[midway, right=2mm] {\footnotesize Execute};
-    
-    % Labels
-    \node at (6, 3.5) {\textbf{Cross-Platform Quantum Execution}};
-    \node at (6, -5.5) {\textbf{Unified Orchestration \& Result Aggregation}};
+    \draw [arrow, red!70] (bell) -- (xfaas);
+    \draw [arrow, red!70] (algo) -- (xfaas);
+    \draw [arrow, red!70] (measure) -- (xfaas);
 \end{tikzpicture}
 }
-\caption{XFaaS Cross-Platform Quantum Computing Architecture}
+\caption{XFaaS Cross-Platform Architecture}
 \label{fig:xfaas_architecture}
 \end{figure}
 
+
+
 The XFaaS architecture demonstrates seamless integration across multiple cloud providers, enabling quantum workloads to execute simultaneously on AWS Lambda with Braket quantum simulators, Azure Functions with Qiskit local simulators, and Google Cloud Functions with Qiskit implementations. The unified orchestration layer manages cross-platform deployment, execution coordination, and result aggregation while maintaining platform-specific optimizations.
 
-\begin{figure}[ht]
-\centering
-\begin{verbatim}
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   AWS Lambda    │    │ Azure Functions │    │  GCP Functions  │
-│                 │    │                 │    │                 │
-│ ┌─────────────┐ │    │ ┌─────────────┐ │    │ ┌─────────────┐ │
-│ │   Braket    │ │    │ │   Qiskit    │ │    │ │   Qiskit    │ │
-│ │  Quantum    │ │    │ │  Simulator  │ │    │ │  Simulator  │ │
-│ │  Simulator  │ │    │ │             │ │    │ │             │ │
-│ └─────────────┘ │    │ └─────────────┘ │    │ └─────────────┘ │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         └───────────────────────┼───────────────────────┘
-                                 │
-                    ┌─────────────────┐
-                    │ XFaaS Manager   │
-                    │ & Orchestrator  │
-                    └─────────────────┘
-\end{verbatim}
-\caption{XFaaS Multi-Provider Quantum Computing Architecture Overview}
-\label{fig:xfaas_overview}
-\end{figure}
 
-The architecture overview illustrates the comprehensive XFaaS implementation where quantum functions are deployed and executed across three major cloud providers simultaneously. Each platform utilizes its optimal quantum simulation framework while the central XFaaS Manager coordinates execution, aggregates results, and provides unified access to cross-platform quantum computing capabilities.
 
 \subsubsection{Quantum Function Distribution Strategy}
 
@@ -295,60 +223,9 @@ The quantum function distribution strategy determines optimal workload allocatio
 
 For quantum circuit execution, the distribution strategy evaluates platform-specific quantum simulators and hardware capabilities. AWS Braket provides access to multiple quantum hardware providers and high-performance simulators, while Azure Quantum offers integration with IonQ and Honeywell systems. Google Cloud Quantum AI provides access to Google's quantum processors and Cirq-based simulations.
 
-\begin{figure}[ht]
-\centering
-\resizebox{0.9\textwidth}{!}{
-\begin{tikzpicture}[node distance=1.5cm, auto]
-    % Define styles
-    \tikzstyle{process} = [rectangle, draw=purple!80, fill=purple!20, text width=2.5cm, text centered, rounded corners, minimum height=1cm]
-    \tikzstyle{decision} = [diamond, draw=orange!80, fill=orange!20, text width=2cm, text centered, minimum height=1cm]
-    \tikzstyle{cloud} = [rectangle, draw=blue!80, fill=blue!20, text width=2cm, text centered, rounded corners, minimum height=0.8cm]
-    \tikzstyle{arrow} = [thick,->,>=stealth]
-    
-    % Workflow steps
-    \node [process] (start) {Quantum Circuit\\Input};
-    \node [decision, below of=start, node distance=2cm] (analyze) {Analyze\\Circuit\\Complexity};
-    \node [process, below left of=analyze, node distance=2.5cm] (select) {Provider\\Selection\\Algorithm};
-    \node [process, below right of=analyze, node distance=2.5cm] (distribute) {Multi-Platform\\Distribution};
-    
-    % Cloud platforms
-    \node [cloud, below of=select, node distance=2cm] (aws_exec) {AWS\\Execution};
-    \node [cloud, below of=distribute, node distance=2cm] (azure_exec) {Azure\\Execution};
-    \node [cloud, right of=azure_exec, node distance=2.5cm] (gcp_exec) {GCP\\Execution};
-    
-    % Results processing
-    \node [process, below of=azure_exec, node distance=2cm] (aggregate) {Result\\Aggregation};
-    \node [process, below of=aggregate, node distance=1.5cm] (consensus) {Consensus\\Analysis};
-    \node [process, below of=consensus, node distance=1.5cm] (output) {Final\\Results};
-    
-    % Arrows
-    \draw [arrow] (start) -- (analyze);
-    \draw [arrow] (analyze) -- (select) node[midway, left] {\footnotesize Single};
-    \draw [arrow] (analyze) -- (distribute) node[midway, right] {\footnotesize Multi};
-    \draw [arrow] (select) -- (aws_exec);
-    \draw [arrow] (distribute) -- (azure_exec);
-    \draw [arrow] (distribute) -- (gcp_exec);
-    \draw [arrow] (aws_exec) -- (aggregate);
-    \draw [arrow] (azure_exec) -- (aggregate);
-    \draw [arrow] (gcp_exec) -- (aggregate);
-    \draw [arrow] (aggregate) -- (consensus);
-    \draw [arrow] (consensus) -- (output);
-    
-    % Performance metrics
-    \node at (-3, -3) {\footnotesize Cost: \$0.02/exec};
-    \node at (0, -3) {\footnotesize Latency: 2.1s};
-    \node at (3, -3) {\footnotesize Reliability: 99.7\%};
-\end{tikzpicture}
-}
-\caption{XFaaS Quantum Workflow and Execution Pipeline}
-\label{fig:xfaas_workflow}
-\end{figure}
-
 The XFaaS workflow demonstrates intelligent quantum circuit processing through automated complexity analysis, dynamic provider selection, and comprehensive result aggregation. The system achieves optimal performance through platform-specific optimizations while maintaining cross-platform consistency and reliability.
 
-\section{Implementation}
 
-The XFaaS implementation provides a comprehensive framework for cross-platform quantum function deployment and execution, extending traditional quantum-cloud integration approaches through multi-provider orchestration and intelligent workload distribution.
 
 \subsection{Enhanced Quantum Circuit Implementation}
 
@@ -386,40 +263,116 @@ Platform-specific quantum handlers implement quantum circuit execution logic tai
 
 The Azure Functions handler implements quantum circuit execution using Qiskit local simulators, providing cost-effective quantum computation for development and testing scenarios. The handler includes integration with Azure Blob Storage for result persistence and Azure Key Vault for secure credential management. The Google Cloud Functions handler similarly utilizes Qiskit simulators while integrating with Google Cloud Storage and Google Cloud IAM for comprehensive cloud-native quantum processing.
 
-\section{System Architecture and Implementation}
+\section{System Architecture and Algorithms}
 
-\subsection{Architecture Overview}
+\subsection{Quantum-Cloud Integration Algorithm}
 
-The quantum-cloud integration system follows a three-tier architecture:
+The core algorithm for quantum-cloud integration manages the workflow between quantum computation and cloud storage operations. Algorithm 1 presents the main integration process:
 
-\begin{itemize}
-    \item \textbf{Quantum Layer}: AWS Braket quantum simulators and devices for quantum circuit execution
-    \item \textbf{Classical Processing Layer}: Python-based orchestration and data processing
-    \item \textbf{Cloud Storage Layer}: AWS S3 for persistent data storage and result management
-\end{itemize}
+
+\begin{algorithm}[h]
+\caption{Quantum-Cloud Integration Workflow}
+\begin{algorithmic}[1]
+\Function{QuantumCloudIntegration}{$circuit, shots, bucket$}
+\State $device \leftarrow$ InitializeQuantumDevice()
+\State $task \leftarrow$ device.run($circuit, shots$)
+\State $result \leftarrow$ task.result()
+\State $counts \leftarrow$ result.measurement\_counts
+\State StoreLocal($counts$, "results/")
+\State StoreCloud($counts$, $bucket$)
+\State \Return $counts$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Bell State Circuit Algorithm}
+
+Algorithm 2 describes the quantum Bell state preparation and measurement process:
+
+\begin{algorithm}[h]
+\caption{Bell State Preparation and Measurement}
+\begin{algorithmic}[1]
+\Function{BellStateExecution}{$shots$}
+\State $circuit \leftarrow$ Circuit()
+\State $circuit$.h(0) \Comment{Apply Hadamard gate to qubit 0}
+\State $circuit$.cnot(0, 1) \Comment{Apply CNOT gate}
+\State $device \leftarrow$ LocalSimulator()
+\State $task \leftarrow$ $device$.run($circuit, shots$)
+\State $result \leftarrow$ $task$.result()
+\State \Return $result$.measurement\_counts
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Cloud Storage Integration Algorithm}
+
+Algorithm 3 handles the cloud storage operations with error handling:
+
+\begin{algorithm}[H]
+\caption{Cloud Storage Integration}
+\SetAlgoLined
+\DontPrintSemicolon
+\SetKwFunction{FCS}{StoreQuantumResults}
+\SetKwProg{Fn}{Function}{:}{}
+\Fn{\FCS{$data, bucket, key$}}{
+    $s3 \gets$ boto3.client(``s3'')\;
+    \Try{
+        $s3.put\_object(Bucket=bucket, Key=key, Body=data)$\;
+        \Return True\;
+    }
+    \Catch{Exception $e$}{
+        Print(``S3 Error: '', $e$)\;
+        \Return False\;
+    }
+}
+\end{algorithm}
+
+
+\subsection{System Workflow Diagram}
 
 \begin{figure}[h]
 \centering
-\resizebox{0.4\textwidth}{!}{
-\begin{tikzpicture}[node distance=2.5cm, auto]
-    % Define styles
-    \tikzstyle{quantum} = [rectangle, draw=blue!80, fill=blue!20, text width=3.5cm, text centered, rounded corners, minimum height=1.5cm]
-    \tikzstyle{classical} = [rectangle, draw=green!80, fill=green!20, text width=3.5cm, text centered, rounded corners, minimum height=1.5cm]
-    \tikzstyle{storage} = [rectangle, draw=orange!80, fill=orange!20, text width=3.5cm, text centered, rounded corners, minimum height=1.5cm]
-    \tikzstyle{arrow} = [thick,->,>=stealth]
+\resizebox{0.6\textwidth}{!}{
+\begin{tikzpicture}[node distance=1.6cm, auto]
+    \tikzstyle{step} = [rectangle, draw=black, text width=0.8cm, text centered, minimum height=0.8cm]
+    \tikzstyle{arrow} = [->,>=stealth]
     
-    % Nodes
-    \node [quantum] (quantum) {\textbf{Quantum Layer}\\AWS Braket\\Bell State\\98.5\% Success};
-    \node [classical, below of=quantum] (classical) {\textbf{Classical Layer}\\Python + Docker\\Processing\\Analysis};
-    \node [storage, below of=classical] (storage) {\textbf{Storage Layer}\\AWS S3\\Persistence\\99.9\% Reliable};
+    \node [step] (start) {Start};
+    \node [step, right of=start] (init) {Init};
+    \node [step, right of=init] (circuit) {Circuit};
+    \node [step, right of=circuit] (execute) {Execute};
+    \node [step, right of=execute] (store) {Store};
+    \node [step, right of=store] (end) {End};
     
-    % Arrows
-    \draw [arrow, blue!70] (quantum) -- (classical) node[midway, right=3mm] {\footnotesize Data};
-    \draw [arrow, green!70] (classical) -- (storage) node[midway, right=3mm] {\footnotesize Results};
-    \draw [arrow, orange!70] (storage.west) -- ++(-1.5,0) |- (quantum.west) node[midway, left=2mm] {\footnotesize Feedback};
+    \draw [arrow] (start) -- (init);
+    \draw [arrow] (init) -- (circuit);
+    \draw [arrow] (circuit) -- (execute);
+    \draw [arrow] (execute) -- (store);
+    \draw [arrow] (store) -- (end);
 \end{tikzpicture}
 }
-\caption{Quantum-Cloud Integration Architecture}
+\caption{System Workflow}
+\label{fig:workflow}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\resizebox{0.7\textwidth}{!}{
+\begin{tikzpicture}[node distance=2.5cm, auto]
+    \tikzstyle{box} = [rectangle, draw=black, text width=1.5cm, text centered, minimum height=0.7cm]
+    \tikzstyle{arrow} = [->,>=stealth]
+    
+    \node [box] (quantum) {Quantum};
+    \node [box, right of=quantum] (classical) {Classical};
+    \node [box, right of=classical] (storage) {Storage};
+    
+    \draw [arrow] (quantum) -- (classical);
+    \draw [arrow] (classical) -- (storage);
+    \draw [arrow] (storage) to[bend right=30] (quantum);
+\end{tikzpicture}
+}
+\caption{Architecture}
 \label{fig:architecture}
 \end{figure}
 
@@ -427,46 +380,53 @@ The system is containerized using Docker to ensure portability and consistent de
 
 \begin{figure}[ht]
 \centering
-\resizebox{0.7\textwidth}{!}{
-\begin{tikzpicture}[node distance=2cm, auto]
+\resizebox{0.57\textwidth}{!}{
+\begin{tikzpicture}[node distance=2.5cm, auto]
     % Define styles
-    \tikzstyle{container} = [rectangle, draw=gray!80, fill=gray!20, text width=2.5cm, text centered, rounded corners, minimum height=1.2cm]
-    \tikzstyle{xfaas} = [rectangle, draw=red!80, fill=red!20, text width=3cm, text centered, rounded corners, minimum height=1.5cm]
-    \tikzstyle{storage} = [cylinder, draw=green!80, fill=green!20, text width=2cm, text centered, minimum height=1cm]
+    \tikzstyle{process} = [rectangle, draw=purple!80, fill=purple!20, text width=2.5cm, text centered, rounded corners, minimum height=1cm]
+    \tikzstyle{decision} = [diamond, draw=orange!80, fill=orange!20, text width=2cm, text centered, minimum height=1cm]
+    \tikzstyle{cloud} = [rectangle, draw=blue!80, fill=blue!20, text width=2cm, text centered, rounded corners, minimum height=0.8cm]
     \tikzstyle{arrow} = [thick,->,>=stealth]
     
-    % XFaaS Layer
-    \node [xfaas] (xfaas_core) {\textbf{XFaaS Core}\\Orchestrator\\Manager};
+    % Workflow steps
+    \node [process] (start) {Quantum Circuit\\Input};
+    \node [decision, below of=start, node distance=3cm] (analyze) {Analyze\\Circuit\\Complexity};
+    \node [process, below left of=analyze, node distance=3.5cm] (select) {Provider\\Selection\\Algorithm};
+    \node [process, below right of=analyze, node distance=3.5cm] (distribute) {Multi-Platform\\Distribution};
     
-    % Container Layer
-    \node [container, above left of=xfaas_core, node distance=3cm] (aws_container) {AWS Lambda\\Container\\Braket SDK};
-    \node [container, above of=xfaas_core, node distance=3cm] (azure_container) {Azure Functions\\Container\\Qiskit};
-    \node [container, above right of=xfaas_core, node distance=3cm] (gcp_container) {GCP Functions\\Container\\Cirq};
+    % Cloud platforms
+    \node [cloud, below of=select, node distance=2cm] (aws_exec) {AWS\\Execution};
+    \node [cloud, below of=distribute, node distance=2cm] (azure_exec) {Azure\\Execution};
+    \node [cloud, right of=azure_exec, node distance=2.5cm] (gcp_exec) {GCP\\Execution};
     
-    % Storage Layer
-    \node [storage, below left of=xfaas_core, node distance=3cm] (s3) {AWS S3\\Results};
-    \node [storage, below of=xfaas_core, node distance=3cm] (blob) {Azure Blob\\Storage};
-    \node [storage, below right of=xfaas_core, node distance=3cm] (gcs) {Google Cloud\\Storage};
+    % Results processing
+    \node [process, below of=azure_exec, node distance=2cm] (aggregate) {Result\\Aggregation};
+    \node [process, below of=aggregate, node distance=1.5cm] (consensus) {Consensus\\Analysis};
+    \node [process, below of=consensus, node distance=1.5cm] (output) {Final\\Results};
     
-    % Arrows - Deployment
-    \draw [arrow, red!70] (xfaas_core) -- (aws_container) node[midway, left] {\footnotesize Deploy};
-    \draw [arrow, red!70] (xfaas_core) -- (azure_container) node[midway, left] {\footnotesize Manage};
-    \draw [arrow, red!70] (xfaas_core) -- (gcp_container) node[midway, right] {\footnotesize Execute};
+    % Arrows
+    \draw [arrow] (start) -- (analyze);
+    \draw [arrow] (analyze) -- (select) node[midway, left] {\footnotesize Single};
+    \draw [arrow] (analyze) -- (distribute) node[midway, right] {\footnotesize Multi};
+    \draw [arrow] (select) -- (aws_exec);
+    \draw [arrow] (distribute) -- (azure_exec);
+    \draw [arrow] (distribute) -- (gcp_exec);
+    \draw [arrow] (aws_exec) -- (aggregate);
+    \draw [arrow] (azure_exec) -- (aggregate);
+    \draw [arrow] (gcp_exec) -- (aggregate);
+    \draw [arrow] (aggregate) -- (consensus);
+    \draw [arrow] (consensus) -- (output);
     
-    % Arrows - Storage
-    \draw [arrow, green!70] (xfaas_core) -- (s3) node[midway, left] {\footnotesize Store};
-    \draw [arrow, green!70] (xfaas_core) -- (blob) node[midway, right] {\footnotesize Sync};
-    \draw [arrow, green!70] (xfaas_core) -- (gcs) node[midway, right] {\footnotesize Backup};
-    
-    % Return arrows
-    \draw [arrow, blue!70] (aws_container) -- (xfaas_core);
-    \draw [arrow, blue!70] (azure_container) -- (xfaas_core);
-    \draw [arrow, blue!70] (gcp_container) -- (xfaas_core);
+    % Performance metrics
+    \node at (-3, -3) {\footnotesize Cost: \$0.02/exec};
+    \node at (0, -6) {\footnotesize Latency: 2.1s};
+    \node at (3, -3) {\footnotesize Reliability: 99.7\%};
 \end{tikzpicture}
 }
-\caption{XFaaS Containerized Deployment Architecture}
-\label{fig:xfaas_containers}
+\caption{XFaaS Quantum Workflow and Execution Pipeline}
+\label{fig:xfaas_workflow}
 \end{figure}
+
 
 \subsection{Implementation Details}
 
@@ -484,45 +444,7 @@ The entire system is containerized using Docker to ensure consistent deployment:
 
 
 
-\section{Experimental Methodology}
-
-\subsection{Test Environment Setup}
-
-The experimental environment consists of:
-\begin{itemize}
-    \item AWS Braket SV1 quantum simulator (32-qubit capacity)
-    \item AWS S3 storage with standard tier configuration
-    \item Docker containers running on Ubuntu 20.04 LTS
-    \item Python 3.9 with Braket SDK and Boto3 libraries
-\end{itemize}
-
-\subsection{Experimental Procedures}
-
-\subsubsection{Quantum Circuit Execution Tests}
-
-Multiple quantum circuits were executed to evaluate system performance:
-
-\begin{itemize}
-    1. \textbf{Bell State Preparation}: Two-qubit entangled state creation and measurement 
-    \newline
-    2. \textbf{Quantum Superposition}: Single-qubit Hadamard gate application \newline
-    3. \textbf{Multi-qubit Circuits}: Scaling tests with 4, 8, and 16 qubits
-\end{itemize}
-    
-    
-Each circuit was executed with varying shot counts (100, 500, 1000) to analyze measurement statistics and execution time scaling.
-
-\subsubsection{Cloud Integration Performance}
-
-Cloud storage performance was evaluated through:
-\begin{itemize}
-    \item Upload latency measurements for different file sizes
-    \item Download performance analysis
-    \item Data integrity verification
-    \item Concurrent access testing
-\end{itemize}
-
-\section{Results and Analysis}
+\section{Experimental Results and Analysis}
 
 The XFaaS implementation demonstrates significant advantages in quantum-cloud integration through enhanced fault tolerance, comprehensive performance comparison, and vendor independence capabilities. The analysis encompasses detailed evaluation of cross-platform execution performance, reliability assessment, and cost optimization benefits.
 
@@ -548,44 +470,13 @@ Quantum measurement result consistency across multiple cloud platforms demonstra
 
 Consensus analysis algorithms identify measurement result agreements across platforms with 94.2\% consistency for Bell state circuits and 96.8\% consistency for single-qubit superposition circuits. Discrepancies primarily stem from different random number generation implementations in quantum simulators rather than fundamental algorithmic differences.
 
-\section{Results and Observations}
+\subsection{Results and Observations}
 
 \subsection{Quantum Circuit Execution Results}
 
 \subsubsection{Bell State Analysis}
 
 The Bell state circuit consistently produced the expected quantum correlation results:
-
-\begin{figure}[h]
-\centering
-\resizebox{0.5\textwidth}{!}{
-\begin{tikzpicture}
-    % Bell State Measurement Results
-    \draw[thick] (0,0) rectangle (10,5);
-    \node at (5,4.5) {\textbf{Bell State Measurement Results}};
-    
-    % |00⟩ state
-    \draw[fill=blue!30] (0.5,2.5) rectangle (4.5,3.5);
-    \node at (2.5,3) {\footnotesize |00⟩: 50\% ± 3.2\%};
-    
-    % |11⟩ state  
-    \draw[fill=blue!30] (5.5,2.5) rectangle (9.5,3.5);
-    \node at (7.5,3) {\footnotesize |11⟩: 50\% ± 3.2\%};
-    
-    % |01⟩ and |10⟩ states (zero probability)
-    \draw[fill=red!20] (0.5,1) rectangle (4.5,2);
-    \node at (2.5,1.5) {\footnotesize |01⟩: 0\% (Entangled)};
-    
-    \draw[fill=red!20] (5.5,1) rectangle (9.5,2);
-    \node at (7.5,1.5) {\footnotesize |10⟩: 0\% (Entangled)};
-    
-    % Statistical variance annotation
-    \node at (5,0.5) {\footnotesize Statistical Variance: σ = 3.2\% (100 runs)};
-\end{tikzpicture}
-}
-\caption{Bell State Measurement Distribution Architecture}
-\label{fig:bell_results}
-\end{figure}
 
 The \textbf{measurement distribution} shows |00⟩ and |11⟩ states observed with approximately 50\% probability each. The \textbf{quantum correlation} demonstrates zero probability for |01⟩ and |10⟩ states, confirming entanglement. The \textbf{statistical variance} shows a standard deviation of 3.2\% across 100 experimental runs.
 
@@ -640,7 +531,7 @@ The complete quantum-to-cloud workflow demonstrated an \textbf{end-to-end latenc
 
 System errors were categorized and analyzed, revealing \textbf{quantum errors} with a 2-5\% failure rate due to simulator limitations. \textbf{Network errors} showed a 0.1\% failure rate in cloud communications, while \textbf{authentication errors} demonstrated a 0.05\% failure rate in AWS credential validation.
 
-\section{Challenges and Solutions}
+\section{Performance Analysis and Challenges}
 
 \subsection{Technical Challenges Identified}
 
@@ -672,15 +563,7 @@ Practical implementations include quantum-enhanced optimization problems, quantu
 
 The implemented system addresses real-world needs across multiple industries. In \textbf{financial services}, it enables portfolio optimization using quantum algorithms. For \textbf{healthcare}, it accelerates drug discovery through quantum simulation. In \textbf{logistics}, it provides route optimization using quantum annealing approaches.
 
-\section{Performance Comparison and Benchmarking}
 
-\subsection{Classical vs Quantum Performance}
-
-For specific problem classes, the quantum implementation showed significant advantages. \textbf{Search problems} demonstrated theoretical quadratic speedup, though not fully realized in current simulators. \textbf{Optimization} tasks showed improved solution quality for small-scale problems. \textbf{Simulation} applications revealed exponential advantage for quantum system modeling.
-
-\subsection{Scalability Analysis}
-
-System scalability was evaluated across multiple dimensions. \textbf{Qubit scaling} analysis revealed linear performance degradation up to simulator limits. \textbf{Shot count scaling} demonstrated logarithmic improvement in measurement accuracy. \textbf{Concurrent user} testing confirmed the system supports up to 10 simultaneous quantum jobs.
 
 \section{Future Work and Enhancements}
 
