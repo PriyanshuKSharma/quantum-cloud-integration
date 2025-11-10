@@ -4,6 +4,8 @@ AWS Lambda Handler for Quantum Processing
 
 import json
 import boto3
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="braket")
 from braket.circuits import Circuit
 from braket.aws import AwsDevice
 
