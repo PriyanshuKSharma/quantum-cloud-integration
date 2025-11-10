@@ -1,0 +1,149 @@
+QUANTUM-CLOUD INTEGRATION PROJECT LICENSE
+Educational and Research Use License (ERUL) v1.0
+
+================================================================================
+
+Copyright (c) 2024 Priyanshu Kumar Sharma
+Project: Cross-Platform Function as a Service (XFaaS) for Quantum-Cloud Integration
+================================================================================
+
+PREAMBLE
+--------
+This license governs the use of the Quantum-Cloud Integration software, including
+all source code, documentation, research papers, algorithms, and associated
+materials (collectively, the "Software"). This project represents significant
+research contributions in quantum computing, cloud integration, and cross-platform
+function-as-a-service architectures.
+
+GRANT OF RIGHTS
+---------------
+Subject to the terms and conditions of this license, the copyright holder hereby
+grants you a worldwide, royalty-free, non-exclusive license to:
+
+1. USE the Software for educational purposes, including:
+   - Academic coursework and assignments
+   - Educational demonstrations and tutorials
+   - Learning quantum computing concepts
+   - Teaching quantum-cloud integration principles
+
+2. USE the Software for research purposes, including:
+   - Academic research projects
+   - Scientific experimentation
+   - Algorithm development and testing
+   - Performance benchmarking studies
+   - Publication in academic journals and conferences
+
+3. MODIFY the Software for educational and research purposes, including:
+   - Adapting code for specific research needs
+   - Extending algorithms for academic study
+   - Creating derivative works for educational use
+   - Optimizing performance for research applications
+
+4. DISTRIBUTE copies of the Software for educational and research purposes,
+   provided all license terms are maintained
+
+RESTRICTIONS
+------------
+1. COMMERCIAL USE PROHIBITION:
+   - No commercial use, sale, or licensing for profit is permitted
+   - No incorporation into commercial products or services
+   - No use in production environments for business purposes
+   - No monetization of the Software or its derivatives
+
+2. ATTRIBUTION REQUIREMENTS:
+   - All copies must include this complete license text
+   - Copyright notice must remain intact and visible
+   - Academic use must cite the original work appropriately
+   - Research publications must acknowledge the Software and author
+
+3. MODIFICATION DISCLOSURE:
+   - Any modifications must be clearly documented
+   - Changes must be attributed to the modifier
+   - Original authorship must be preserved and acknowledged
+   - Modified versions must indicate they are not the original
+
+4. DISTRIBUTION REQUIREMENTS:
+   - Redistributions must include this license
+   - Source code availability must be maintained
+   - No additional restrictions may be imposed
+   - Recipients must be informed of their rights under this license
+
+SPECIFIC TERMS FOR QUANTUM COMPUTING RESEARCH
+----------------------------------------------
+1. QUANTUM ALGORITHM USAGE:
+   - Quantum algorithms may be used for academic research
+   - Implementation details may be studied and analyzed
+   - Performance comparisons are encouraged for research
+   - Results may be published in academic venues with proper citation
+
+2. CLOUD INTEGRATION COMPONENTS:
+   - AWS, Azure, and GCP integration code is for educational use
+   - Cloud provider credentials and access are user's responsibility
+   - No warranty is provided for cloud service compatibility
+   - Users must comply with respective cloud provider terms
+
+3. CROSS-PLATFORM ARCHITECTURE:
+   - XFaaS framework may be studied and extended for research
+   - Architecture patterns may be analyzed and documented
+   - Performance metrics may be reproduced and verified
+   - Improvements may be contributed back to the community
+
+COMMERCIAL LICENSING
+--------------------
+For any commercial use, including but not limited to:
+- Integration into commercial products or services
+- Use in production business environments
+- Licensing to third parties for commercial purposes
+- Monetization of the Software or its derivatives
+- Consulting services based on the Software
+
+Explicit written permission must be obtained from the copyright holder.
+Commercial licensing terms will be negotiated on a case-by-case basis.
+
+Contact for commercial licensing:
+Priyanshu Kumar Sharma
+Email: priyanshu.sharma@[institution].edu
+Project: Quantum-Cloud Integration XFaaS Framework
+Subject: Commercial License Request - [Your Organization]
+
+WARRANTY DISCLAIMER
+-------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. THE ENTIRE RISK AS
+TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH YOU.
+
+LIMITATION OF LIABILITY
+-----------------------
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE. THIS INCLUDES, WITHOUT LIMITATION:
+- Direct, indirect, incidental, or consequential damages
+- Loss of profits, data, or business interruption
+- Cloud service costs or quantum computing charges
+- Security breaches or data loss
+- Performance issues or system failures
+
+TERMINATION
+-----------
+This license automatically terminates if you violate any of its terms.
+Upon termination, you must cease all use of the Software and destroy all
+copies in your possession or control.
+
+GOVERNING LAW
+-------------
+This license shall be governed by and construed in accordance with the laws
+of [Your Jurisdiction], without regard to its conflict of law provisions.
+
+ACKNOWLEDGMENT
+--------------
+By using this Software, you acknowledge that you have read this license,
+understand it, and agree to be bound by its terms and conditions.
+
+================================================================================
+
+Quantum-Cloud Integration Project
+Educational and Research Use License (ERUL) v1.0
+Copyright (c) 2024 Priyanshu Kumar Sharma
+================================================================================
