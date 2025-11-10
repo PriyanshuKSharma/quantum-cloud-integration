@@ -28,11 +28,11 @@ resource "azurerm_function_app" "function" {
   storage_account_name       = azurerm_storage_account.storage.name
   storage_account_access_key = azurerm_storage_account.storage.primary_access_key
   app_service_plan_id = azurerm_service_plan.plan.id
-  os_type             = "Linux"
+  os_type             = "linux"
   app_settings    = {
     "FUNCTIONS_WORKER_RUNTIME" = "python"
   }
-  zip_deploy_file = "azure_function.zip"
+  # zip_deploy_file = "azure_function.zip"
 }
 
 resource "azurerm_service_plan" "plan" {

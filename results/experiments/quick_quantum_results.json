@@ -1,0 +1,23 @@
+{
+  "search": {
+    "quantum_time": 0.5805931091308594,
+    "classical_time": 0.0,
+    "speedup": 0.0
+  },
+  "optimization": {
+    "quantum_time": 0.1237494945526123,
+    "classical_time": 0.0,
+    "speedup": 0.0,
+    "quantum_result": {
+      "1101 0000": 58,
+      "0100 0000": 85,
+      "0111 0000": 39
+    },
+    "classical_result": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+# LaTeX build files
+*.fdb_latexmk
+*.synctex(busy)
+*.synctex.gz
+*.aux
+*.log
+*.out
+*.toc
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Python virtual environments
+quantum-env/
+src/quantum-env/
+venv/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
