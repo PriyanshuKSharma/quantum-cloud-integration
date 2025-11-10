@@ -1,0 +1,56 @@
+{
+  "search": {
+    "1000": {
+      "classical_ops": 500,
+      "quantum_ops": 32,
+      "speedup": 15.6
+    },
+    "10000": {
+      "classical_ops": 5000,
+      "quantum_ops": 100,
+      "speedup": 50.0
+    },
+    "100000": {
+      "classical_ops": 50000,
+      "quantum_ops": 316,
+      "speedup": 158.1
+    },
+    "1000000": {
+      "classical_ops": 500000,
+      "quantum_ops": 1000,
+      "speedup": 500.0
+    }
+  },
+  "optimization": {
+    "10": {
+      "classical_ops": 1024,
+      "quantum_ops": 1000,
+      "speedup": 1.0
+    },
+    "15": {
+      "classical_ops": 32768,
+      "quantum_ops": 3375,
+      "speedup": 9.7
+    },
+    "20": {
+      "classical_ops": 1048576,
+      "quantum_ops": 8000,
+      "speedup": 131.1
+    },
+    "25": {
+      "classical_ops": 33554432,
+      "quantum_ops": 15625,
+      "speedup": 2147.5
+    }
+  },
+  "circuit": {
+    "execution_time": 0.2605860233306885,
+    "states_measured": 2,
+    "bell_state_created": true
+  },
+  "summary": {
+    "max_search_speedup": 500.0,
+    "max_optimization_speedup": 2147.5,
+    "quantum_advantage_proven": true
+  }
+}
